@@ -1,0 +1,22 @@
+{% extends 'todo/main.html' %}
+
+{% block content %}
+
+<div class="container">
+     <div class="col-md-center">
+        <h2 class="text-center">ToDo App</h2><br>
+     </div>
+</div>
+
+    <div class="container">
+    <div class="row justify-content-md-center">
+    <form method="post">
+        {% csrf_token %}
+        <p>{{ form.title }}</p>
+        <p>{{ form.description }}</p>
+        Status: {{ form.status }}<br>
+    <input class="btn btn-info" type="submit" name="update">
+    </form>
+    </div>
+   </div>
+{% endblock %}
